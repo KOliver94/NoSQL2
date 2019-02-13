@@ -18,7 +18,7 @@ problémák miatt). Éppen ezért a NoSQL adatbázisok is erősen eltérőek leh
 különböztetjük meg.
 
 - Kulcs - Érték alapú tárolók
-    * Pl.: REDIS, Appache Accumulo
+    * Pl.: REDIS, Apache Accumulo
 - Dokumentum alapú
     * Pl.: MongoDB, CouchDB
 - Oszlop alapú
@@ -166,7 +166,7 @@ PSUBSCRIBE my\*
 PUBLUSH mychannel “test message”
 ```
 
-**Plda lista műveletekre**
+**Példa lista műveletekre**
 
 ```shell
 LPUSH mylist a # (integer) 1
@@ -189,7 +189,7 @@ chatelhetnek a fő szobában, valamint privát üzeneteket küldhetnek egymásna
 a repository adja.
 
 ### 2.1. Megjelenítés
-Az első lépés az alkalamzás megjelenítésének elkészítése, ez a komplikációk elkerülsée végett egyszerű HTML-ben
+Az első lépés az alkalamzás megjelenítésének elkészítése, ez a komplikációk elkerülése végett egyszerű HTML-ben
 történik, vanilla JavaScript-tel (azaz nem használunk külön keretrendszert). Kezdjük magának a chat felületnek az
 elkészítésével.
 
@@ -629,7 +629,7 @@ Message:
     user: <String - A felhasználó neve>
     date: <Date - Mikor küldte az üzenetet>
     content: <String - Az üzenet tartalma>
-    room: <Stirng - A szoba neve ahova az üzenet ment>
+    room: <String - A szoba neve ahova az üzenet ment>
 }
 ```
 
@@ -688,14 +688,14 @@ Ezzel készen is vagyunk, az üzeneteink immáron a közös MongoDB adatbázisba
 **Adatbázis elérést kérj a labor vezetőtől, mert ez mérésenként változik!**
 
 ### 2.3. Valós idejű kommunikáció
-Az éppen aktuálisan online felhasználók listáját nem célszerű általában adatbázsiban tárolni, hisz gyakran változhat,
+Az éppen aktuálisan online felhasználók listáját nem célszerű általában adatbázisban tárolni, hisz gyakran változhat,
 folyamatosan frissíteni kellhet, ráadásul nem is üzleti adat. A mi alkalmazásunkban éppen ezért ezt egy REDIS
 kulcs-érték tárral fogjuk megoldani. Ennek két feladata lesz:
 
 * Tárolni az éppen aktuális felhasználók listáját.
 * Értesíteni a feliratkozókat ha ez változik.
 
-A második feladatot a REDIS Publis-Subscribe modell segítségével fogjuk megvalósítani, amely lehetővé teszi `channel`-ek
+A második feladatot a REDIS Publish-Subscribe modell segítségével fogjuk megvalósítani, amely lehetővé teszi `channel`-ek
 létrehozását, amelyekbe események küldhetők be, valamint kliensek iratkozhatnak fel a figyelésükre.
 
 Tehát összegezve:
