@@ -161,9 +161,9 @@ PERSIST department
 Ebben az esetben a TTL már -1 értéket ad vissza.
 
 ```
-SCUBSCRIBE mychannel
+SUBSCRIBE mychannel
 PSUBSCRIBE my\*
-PUBLUSH mychannel “test message”
+PUBLISH mychannel “test message”
 ```
 
 **Példa lista műveletekre**
