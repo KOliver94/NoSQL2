@@ -64,7 +64,7 @@ nincsenek megkötések arra vonatkozóan, hogy egy collection-be hány és milye
    favouriteAnimal: "cat"
 },
 {
-   firstName: Alíz,
+   firstName: "Alíz",
    email: "alíz@email.com",
    eyeColor: "Blue"
 },
