@@ -843,7 +843,7 @@ megkönnyítésére már létrehoztunk pár példát az adatbázisban.
 ![4. Feladat](readme_images/feladat4.png)
 
 ### 3.3. Csatorna változás figyelés
-Egészítsd ki az előző funkciót azal, hogy az alkalmazás figyeli a REDIS-es `channels_channelt`-t, az ide érkező események
+Egészítsd ki az előző funkciót azal, hogy az alkalmazás figyeli a REDIS-es `channels_channel`-t, az ide érkező események
 hatására frissítve a szoba listát. Teszteléshez felvehetsz tetszőleges szobát akár programozottan (például a 
 `connect` függvény kiegészítésével, hogy sikeres csatlakozás után hozzon létre egy új szobát), akár a felületre
 kivezetett gombok segítségével (de ez nem kötelező, ez nem HTML/CSS labor).
