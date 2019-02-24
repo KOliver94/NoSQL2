@@ -97,7 +97,7 @@ db.getCollection('myCollection').find({eyeColor: "Blue"})
 
 // Eredmény
 {
-   firstName: Alíz,
+   firstName: "Alíz",
    email: "alíz@email.com",
    eyeColor: "Blue"
 },
